@@ -1,5 +1,6 @@
 # Boulder Police - Offenses (2008-2019)
 
+
 ## Table of Contents
 1. [Introduction](#overview)
 2. [Data](#data)
