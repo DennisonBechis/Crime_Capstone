@@ -4,6 +4,6 @@
 1. [Introduction](#overview)
 2. [Data](#data)
 3. [First thoughts](#First-thoughts)
-4. [Offenses](#when-these-offenses-occur?)
+4. [When Boulder Offenses occur](#when-these-offenses-occur?)
 5. [Analysis?](#Data-interpretation?)
 6. [Additional Questions?](#Additional-Questions?)
