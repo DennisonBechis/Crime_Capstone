@@ -17,7 +17,7 @@ The Boulder Police department works to reduce crime, protect life, and keep Boul
 
 ## Data
 
-The data was obtained from the city of Boulder's webpage at [site](https://bouldercolorado.gov/open-data/department/police). The data was formatted as a CSV with 7 columns and 35,000 rows. The data was in good condition with the exception of about 200 rows. These rows has mislabeled street address making these columns invalid.
+The data was obtained from the city of Boulder's webpage at [site](https://bouldercolorado.gov/open-data/department/police). The data was formatted as a CSV with 7 columns and 35,000 rows. The data was in good condition with the exception of about 200 rows. These rows had missing street numbers or mispelled address's.
 
 | Column Names  | Description   |
 | ------------- | ------------- | 
@@ -29,8 +29,8 @@ The data was obtained from the city of Boulder's webpage at [site](https://bould
 | BLOCKADD      | Street Address|
 | OFFENSE       | Felony Offense|
 
-
 ## Boulder County Offenses
+
 
 
 
