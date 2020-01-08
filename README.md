@@ -31,6 +31,8 @@ The data was obtained from the city of Boulder's webpage at [site](https://bould
 
 ## Boulder County Offenses
 
+![Heatmap around Boulder, CO](images/png_to_gif.gif)
+
 
 
 
