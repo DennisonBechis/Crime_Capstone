@@ -23,15 +23,20 @@ Data Columns:
 1. X - Longitude
 2. Y - Latitude
 3. OBJECTID - Primary key
-4. REPORTINUM - Report number
+4. REPORTNUM - Report number
 5. REPORTDATE - Date
 6. BLOCKADD - Street address
 7. Offense - Felony offense
 
-| First Header  | Second Header |
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
+| Column Names  | Description   |
+| ------------- | ------------- | 
+| X             | Longitude     |              
+| Y             | Latitude      |
+| OBJECTID      | Primary Key   | 
+| REPORTNUM     | Report Number |
+| REPORTDATE    | Date          |
+| BLOCKADD      | Street Address|
+| OFFENSE       | Felony Offense|
 
 
 ## Boulder County Offenses
