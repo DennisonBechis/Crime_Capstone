@@ -19,14 +19,10 @@ The Boulder Police department works to reduce crime, protect life, and keep Boul
 
 The data was obtained from the city of Boulder webpage [site](https://bouldercolorado.gov/open-data/department/police). The data was formatted as a CSV with 7 columns and 35,000 rows. The data was in good condition with the exception of about 200 rows. These rows has mislabeled street address making these columns invalid.
 
-# Columns
-1.
-2.
-3.
-4.
-5.
-6.
-7.
+1. First list item
+-a
+-a
+-a
 
 This studys main focus depended on latitude and longitude coordinates for each offense. 
 
