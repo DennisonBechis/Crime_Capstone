@@ -12,12 +12,3 @@ def clean_report_dates(dataframe , date_column):
     dataframe['REPORTDATE'] = dataframe.apply(lambda x: x['REPORTDATE'][0:10], axis=1)
     dataframe['REPORTDATE'] = pd.to_datetime(dataframe['REPORTDATE'])
     return dataframe
-
-
-
-
-if __name__ == "__main__":
-    df = pd.read_csv('../data/Crime.csv')
-    a = clean_report_dates(df, 'REPORTDATE')
-    print(a['REPORTDATE'])
-    a.info()

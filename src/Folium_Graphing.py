@@ -1,13 +1,22 @@
-import pandas as pd
 import folium
 from folium.plugins import MarkerCluster
 from folium.plugins import HeatMap
 from folium.map import Layer
 
-def folium_crime_heatmap(map_object, save_name, data,
-                 zoom_start=12,
-                 min_opacity=0.2, radius=9,
-                 max_zoom=1, auto_play=True):
+def folium_crime_heatmap(map_object, save_name, data, zoom_start=12, min_opacity=0.3):
+
+    '''
+        Inputs:
+            map_object  : Initialized map object
+            save_name   : File name for HeatMap
+            data        : List of lists [ [latitudes_list], [longitudes_list] ]
+            min_opacity : Heat color opacity
+    '''
+
+    auto_play = True
+    max_zoom = 1
+    radius = 11
+    min_opacity = 0.3
 
     HeatMap(data, min_opacity=min_opacity,
                    max_val=float(60),
@@ -16,22 +25,14 @@ def folium_crime_heatmap(map_object, save_name, data,
 
     return map_object.save( '../images/'+ save_name + '.html')
 
-def Create_folium_map(dataframe, lat_name, long_name, zoom_start = 13):
+def Create_folium_map(dataframe, latitude_name, longitude_name, zoom_start = 13):
 
-    return folium.Map(location = [df[lat_name].mean(), df[long_name].mean()], zoom_start=zoom_start)
+    '''
+        Inputs:
+            dataframe       : Pandas dataframe
+            latitude_name   : Column name containing latitudes
+            longitude_name  : Column name containing longitude
+            zoom_start      : Starting Zoom position on map
+    '''
 
-
-if __name__== '__main__':
-
-    df = pd.read_csv('../data/Crime.csv')
-
-    longitude = df['X'].to_numpy()
-    latitude = df['Y'].to_numpy()
-
-    m = Create_folium_map(df, 'Y','X')
-
-    data = []
-    for x in range(0, len(latitude)):
-        data.append([latitude[x],longitude[x]])
-
-    folium_crime_heatmap(m, 'Heat_Map', data)
+    return folium.Map(location = [dataframe[latitude_name].mean(), dataframe[longitude_name].mean()], zoom_start=zoom_start)
