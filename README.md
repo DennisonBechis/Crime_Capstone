@@ -5,7 +5,7 @@
 ## Table of Contents
 1. [Introduction](#Introduction)
 2. [Data](#data)
-3. [First thoughts](#First-thoughts)
+3. [Boulder County Offenses](#Boulder-County-Offenses)
 4. [When Boulder Offenses occur](#when-these-offenses-occur?)
 5. [Analysis?](#Data-interpretation?)
 6. [Additional Questions?](#Additional-Questions?)
@@ -17,7 +17,7 @@ The Boulder Police department works to reduce crime, protect life, and keep Boul
 
 ## Data
 
-The data was obtained from the city of Boulder webpage [site](https://bouldercolorado.gov/open-data/department/police). The data was formatted as a CSV with 7 columns and 35,000 rows. The data was in good condition with the exception of about 200 rows. These rows has mislabeled street address making these columns invalid.
+The data was obtained from the city of Boulder's webpage at [site](https://bouldercolorado.gov/open-data/department/police). The data was formatted as a CSV with 7 columns and 35,000 rows. The data was in good condition with the exception of about 200 rows. These rows has mislabeled street address making these columns invalid.
 
 Data Columns: 
 1. X - Longitude
@@ -29,6 +29,8 @@ Data Columns:
 7. Offense - Felony offense
 
 ## Boulder County Offenses
+
+
 
 
 
