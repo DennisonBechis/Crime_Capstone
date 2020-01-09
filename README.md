@@ -1,4 +1,3 @@
-# 
   <h1 align="center">
 	  Boulder Police - Offenses (2008-2019)
   </h1>
