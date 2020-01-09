@@ -74,6 +74,9 @@ Takeaways:
 4. Most criminal activity is peaks on Fridays
 
 
+## Additional Questions
+
+My main takeaway for this project was to better understand the types of crime in Boulder and where these incidents occur. Going forward I would be fascinated to statistically test observations made above. The several graphs seem to indicate that there is some type of correlation between crime and season. To further improve this project, I would want to pursue a hypothesis test between crime and season.
 
 
 
