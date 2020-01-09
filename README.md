@@ -42,6 +42,8 @@ Similar to the graph above, I decided to graph crimes agaisnt months. In this gr
 
 ![Crimes per Month Boulder, CO](images/crime_by_month.png)
 
+![Types of Crimes that Occur Boulder, CO](images/Boulder_felony_offenses.png)
+
 
 
 
