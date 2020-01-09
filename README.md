@@ -47,15 +47,22 @@ Similar to the graph above, I decided to graph crimes agaisnt months. In this gr
 
 ## What types of crime occur in Boulder?
 
-The next progression in my study was to determine the different types of crimes I am looking at. Most crime that occurs at Boulder comes mostly from destruction of property. I imagine burglary is high since many residents often leave thier doors unlocked. What is surprising, even for Boulder, is the low rate of homicides committed. This graph represents the total occurences of each offense meaning that about 1.8 homicides happen a year in boulder.
+The next progression in my study was to determine the different types of crimes in Boulder. Most crime in Boulder comes from destruction of property or burglary. I imagine burglary is high since many residents often leave thier doors unlocked. What is surprising, even for Boulder, is the low rate of homicides committed. This graph represents the total occurences of each offense meaning that about 1.8 homicides happen a year in boulder.
 
 ![Types of Crimes Boulder, CO](images/Boulder_felony_offenses.png)
 
+## Where are crimes being committed?
+
+The latitude and longitude coordinates were very interesting pieces of information for my analysis. Using these coordinates I could create a heat map depicting the various crime prone areas. Most crime in Boulder is consolidated around Univeristy Hill, a common location for fraternaties and Pearl Street, the main shopping, restuarants, and bar location in Boulder. 
+
+Strange Obervations:
+1. Heatspot at Fire Boulder Department
+2.
+
+![Heatmap around Boulder, CO](images/png_to_gif.gif)
 
 
 ![Crimes per Season Boulder, CO](images/Season.png)
-
-![Heatmap around Boulder, CO](images/png_to_gif.gif)
 
 
 
