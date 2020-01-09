@@ -13,7 +13,6 @@
 5. [Analysis?](#Data-interpretation?)
 6. [Additional Questions?](#Additional-Questions?)
 
-
 ## Introduction
 
 The Boulder Police department works to reduce crime, protect life, and keep Boulder properties safe. The city of Boulder varies in diveristy and population over the course of the year. This study hopes to investigate the influences that the student population may have on the city. The study's main focus will be determining when and where felony offenses are occuring and if these trends are impacted by the Univeristy of Colorado.
