@@ -72,6 +72,8 @@ Obervations:
 
 ![Heatmap around Boulder, CO](images/png_to_gif.gif)
 
+## Data takeaway
+
 Most of my data has made it apparent that seasons may have a strong influence on crime. To gain more insite in this possible correlation, I decided to graph my data in terms of season and day. The resulting graph has many noticeable features including what days are most popular for commiting crimes.
 
 ![Crimes per Season Boulder, CO](images/Season.png)
