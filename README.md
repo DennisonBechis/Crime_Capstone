@@ -47,7 +47,11 @@ Similar to the graph above, I decided to graph crimes agaisnt months. In this gr
 
 ## What types of crime occur in Boulder?
 
+The next progression in my study was to determine the different types of crimes I am looking at. Most crime that occurs at Boulder comes mostly from destruction of property. I imagine burglary is high since many residents often leave thier doors unlocked. What is surprising, even for Boulder, is the low rate of homicides committed. This graph represents the total occurences of each offense meaning that about 1.8 homicides happen a year in boulder.
+
 ![Types of Crimes Boulder, CO](images/Boulder_felony_offenses.png)
+
+
 
 ![Crimes per Season Boulder, CO](images/Season.png)
 
