@@ -55,9 +55,10 @@ The next progression in my study was to determine the different types of crimes 
 
 The latitude and longitude coordinates were very interesting pieces of information for my analysis. Using these coordinates I could create a heat map depicting the various crime prone areas. Most crime in Boulder is consolidated around Univeristy Hill, a common location for fraternaties and Pearl Street, the main shopping, restuarants, and bar location in Boulder. 
 
-Strange Obervations:
-1. Heatspot at Fire Boulder Department
-2.
+Obervations:
+1. Pearl Street
+2. University Hill
+3. Heatspot at Fire Boulder Department
 
 ![Heatmap around Boulder, CO](images/png_to_gif.gif)
 
