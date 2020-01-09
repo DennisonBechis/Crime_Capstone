@@ -40,7 +40,8 @@ The first question I was interested in was determining the total number of crime
 
 Similar to the graph above, I decided to graph crimes agaisnt months. In this graph, I see another trend in which the months from July to October have a higher crime rate. This uptick in crime is due to the returning Univeristy students.
 
-![Crimes per Month Boulder, CO]
+![Crimes per Month Boulder, CO](images/Crime_by_month.png)
+
 
 
 
