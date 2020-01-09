@@ -1,4 +1,4 @@
-->Boulder Police - Offenses (2008-2019)<-
+# Boulder Police - Offenses (2008-2019)
 ![Offenses around Boulder, CO](images/Heat_map_All.png)
 
 
