@@ -59,11 +59,19 @@ Obervations:
 1. Pearl Street
 2. University Hill
 3. Heatspot at Fire Boulder Department
+4. Heatspots are very seasonal
 
 ![Heatmap around Boulder, CO](images/png_to_gif.gif)
 
+Most of my data has made it apparent that seasons may have a strong influence on crime. To gain more insite in this possible correlation, I decided to graph my data in terms of season and day. The resulting graph has many noticeable features including what days are most popular for commiting crimes.
 
 ![Crimes per Season Boulder, CO](images/Season.png)
+
+Takeaways:
+1. Crime peaks in Summer and Fall seasons.
+2. People commit crime less during the Winter.
+3. Crime is less on Saturday and Sunday.
+4. Most criminal activity is peaks on Fridays
 
 
 
