@@ -22,7 +22,6 @@ The Boulder Police department works to reduce crime, protect life, and keep Boul
 
 The data was obtained from the city of Boulder's webpage at [site](https://bouldercolorado.gov/open-data/department/police). The data was formatted as a CSV with 7 columns and 35,000 rows. The data was in good condition with the exception of about 200 rows. These rows had missing street numbers or mispelled address's. 
 
- <table align="center">
 | Column Names  | Description   |
 | ------------- | ------------- | 
 | X             | Longitude     |              
@@ -32,7 +31,7 @@ The data was obtained from the city of Boulder's webpage at [site](https://bould
 | REPORTDATE    | Date          |
 | BLOCKADD      | Street Address|
 | OFFENSE       | Felony Offense|
-</table>
+
 ## When is crime most active?
 
 The first question I was interested in was determining the total number of crimes commited from 2008-2019. The resulting graph shows that crimes were decreasing from 2008 to 2014. After 2014, crimes in Boulder seemed to start increasing again. Being curious about this trend, I researched possible reasons that this may have occurred. What I found interesting was that the Boulder Chief of police resigned at the end of 2014. He was replaced the new Chief Ken Koch. This change in the Boulder police department may have lead to different policing policies.
