@@ -59,6 +59,8 @@ The next progression in my study was to determine the different types of crimes 
 | 1400 Block Canyon Blvd        | 207 |
 | 1600 Block 30th St            | 202 |
 | 2900 Block Baseline Rd        | 199 |
+| 3300 Block 28th St            | 191 |
+| 2900 Block E Aurora Ave       | 184 |
 
 The latitude and longitude coordinates were very interesting pieces of information for my analysis. Using these coordinates I could create a heat map depicting the various crime prone areas. Most crime in Boulder is consolidated around Univeristy Hill, a common location for fraternaties, and Pearl Street, the main location for shopping, restuarants, and bars.
 
