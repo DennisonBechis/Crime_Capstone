@@ -50,15 +50,15 @@ The next progression in my study was to determine the different types of crimes 
 
 ## Where are crimes being committed?
 
-| Column Names  | Count         |
+| Locations     | Count         |
 | ------------- | ------------- | 
-| X             | Longitude     |              
-| Y             | Latitude      |
-| OBJECTID      | Primary Key   | 
-| REPORTNUM     | Report Number |
-| REPORTDATE    | Date          |
-| BLOCKADD      | Street Address|
-| OFFENSE       | Felony Offense|
+| 4500 Block 19th St             | 246     |              
+| 1000 Block Canyon Blvd             | 225      |
+| 1400 Block Walnut St      | 213   | 
+| 1100 Block 13th St     | 210 |
+| 1400 Block Canyon Blvd    | 207          |
+| 1600 Block 30th St      | 202|
+| 2900 Block Baseline Rd       | 199 |
 
 The latitude and longitude coordinates were very interesting pieces of information for my analysis. Using these coordinates I could create a heat map depicting the various crime prone areas. Most crime in Boulder is consolidated around Univeristy Hill, a common location for fraternaties and Pearl Street, the main shopping, restuarants, and bar location in Boulder. 
 
