@@ -43,7 +43,7 @@ def horizontal_bar(ax, labels, data, name='horizontal_bar_graph', x_label = Fals
     plt.savefig('../images/'+name+'.png')
     return ax
 
-def line_plot(ax, x, y):
+def line_plot(ax, x, y, label):
 
-    ax.plot(x,y)
+    ax.plot(x,y,label=label)
     return ax

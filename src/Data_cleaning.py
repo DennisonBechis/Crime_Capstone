@@ -14,22 +14,12 @@ def clean_report_dates(dataframe , date_column):
     return dataframe
 
 def assign_key_values(offense):
-    if offense == 'Vandalism':
-        return 1
-    elif offense == 'Sex Assault':
-        return 2
-    elif offense == 'Trespassing':
-        return 3
-    elif offense == 'Burglary':
-        return 4
-    elif offense == 'Theft From Vehicle':
-        return 5
-    elif offense == 'Assault':
-        return 6
-    elif offense == 'Incident':
-        return 7
-    elif offense == 'Auto Theft':
-        return 8
+
+    offense_dictionary = {'Vandalism': 1, 'Sex Assault':2, 'Trespassing':3, 'Burglary':4,
+                          'Theft From Vehicle':5,'Assault':6, 'Incident':7, 'Auto Theft':8}
+
+    if offense in offense_dictionary.keys():
+        return offense_dictionary[offense]
     else:
         return 0
 

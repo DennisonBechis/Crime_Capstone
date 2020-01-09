@@ -4,11 +4,12 @@ from Data_cleaning import *
 from matplotlib import pyplot as plt
 from Plot_Functions import *
 from Folium_Graphing import *
+import scipy.stats as stats
 
 
 if __name__=="__main__":
 
-    plt.style.use('fivethirtyeight')
+    plt.style.use('classic')
 
     # DF_Copies
 
@@ -20,38 +21,41 @@ if __name__=="__main__":
     crime_df['Month'] = crime_df.apply(lambda x: x['REPORTDATE'][5:7], axis=1)
     crime_df['Key'] = crime_df.apply(lambda row: assign_key_values(row[6]), axis=1)
     crime_df['Tally'] = 1
-
+    print(crime_df)
     # Group By Year
 
     crime_by_year = crime_df.groupby(crime_df['Year']).agg({'Tally':'sum'}).reset_index()
     year_labels = crime_by_year['Year'].to_numpy()
     total = crime_by_year['Tally'].to_numpy()
-    fig1 = plt.figure(figsize=(6,6))
+    fig1 = plt.figure(figsize=(8,5))
     ax1 = fig1.add_subplot(1,1,1)
     bar_plot(ax1, year_labels, total, 'Crime_by_year', 'Year', '# Crimes', 'red', 'Crimes per Year')
 
     # Grouping by Month/Year
 
     crime_by_year_month = crime_df.groupby(['Year','Month']).agg({'Tally':'sum'}).reset_index()
+    crime_by_year_month2 = crime_by_year_month.groupby(['Year']).agg({'Tally':'mean'}).reset_index()
     year_month = crime_by_year_month['Month'].to_numpy()
     total_month = crime_by_year_month['Tally'].to_numpy()
     labels = ['' for x in range(0,len(year_month))]
-    fig2 = plt.figure(figsize=(6,6))
+    a = np.arange(0,len(year_month))
+
+    fig2 = plt.figure(figsize=(8,5))
     ax2 = fig2.add_subplot(1,1,1)
-    bar_plot(ax2, labels, total_month, 'crime_by_month_year', 'Month', 'Crimes Committed', 'red', "Crimes per Month")
+    line_plot(ax2, a, total_month, label='label')
+    plt.show()
 
     # Grouping by Crime_df / Month
 
     crime_by_offense_month = crime_df.groupby(['Month','OFFENSE']).agg({'Tally':'sum'}).reset_index()
 
     # Grouping by Month
-
-    crime_by_month = crime_df.groupby(['Month']).agg({'Tally':'sum'}).reset_index()
-    fig3 = plt.figure(figsize=(6,6))
+    crime_by_month = crime_by_year_month.groupby(['Month']).agg({'Tally':'mean'}).reset_index()
+    fig3 = plt.figure(figsize=(8,5))
     ax3 = fig3.add_subplot(1,1,1)
     total_offenses_by_month = crime_by_month['Tally'].to_numpy()
     labels = crime_by_month['Month'].to_numpy()
-    bar_plot(ax3, labels, total_offenses_by_month, 'crime_by_month', 'Months', 'Crimes Committed', color = 'red')
+    bar_plot(ax3, labels, total_offenses_by_month, 'crime_by_month', 'Month', 'Avg Crimes Committed', 'red', 'Crimes vs Month')
 
     # Highest Crimes in Boulder
 
@@ -59,7 +63,7 @@ if __name__=="__main__":
     crimes_total_offenses = crimes_total_offenses.sort_values(by=['Tally'], ascending=True)
     labels = crimes_total_offenses['OFFENSE'].to_numpy()
     values = crimes_total_offenses['Tally'].to_numpy()
-    fig4 = plt.figure(figsize=(6,6))
+    fig4 = plt.figure(figsize=(8,5))
     ax4 = fig4.add_subplot(1,1,1)
     horizontal_bar(ax4, labels, values, 'Boulder_felony_offenses', 'Count', '', 'Felony Crimes')
 
@@ -81,12 +85,7 @@ if __name__=="__main__":
             data.append([latitude[x],longitude[x]])
         # folium_crime_heatmap(heat_map_folium, name, data)
 
-    # KDE plot Crime vs Month
-
-    # kde_plot(crime_df['Key'], crime_df['Month'], 'Offense_key', 'Month', 'Offense_density')
-
     # Generating tally for each OFFENSE in Boulder
-
 
     crime_df = clean_report_dates(crime_df, 'REPORTDATE')
     crime_df['Day'] = crime_df.apply(lambda x: x['REPORTDATE'].dayofweek, axis=1)
@@ -98,14 +97,25 @@ if __name__=="__main__":
     crime_df_summer = crime_df_season_day[crime_df_season_day['Season'] == 'summer']
     crime_df_winter = crime_df_season_day[crime_df_season_day['Season'] == 'winter']
 
-    fig5 = plt.figure(figsize=(6,6))
+    fig5 = plt.figure(figsize=(8,5))
     ax5 = fig5.add_subplot(1,1,1)
 
-    line_plot(ax5, crime_df_fall['Day'].to_numpy(), crime_df_fall['Tally'].to_numpy())
-    line_plot(ax5, crime_df_spring['Day'].to_numpy(), crime_df_spring['Tally'].to_numpy())
-    line_plot(ax5, crime_df_summer['Day'].to_numpy(), crime_df_summer['Tally'].to_numpy())
-    line_plot(ax5, crime_df_winter['Day'].to_numpy(), crime_df_winter['Tally'].to_numpy())
-    plt.show()
+    line_plot(ax5, crime_df_fall['Day'].to_numpy(), crime_df_fall['Tally'].to_numpy(), 'Fall')
+    line_plot(ax5, crime_df_spring['Day'].to_numpy(), crime_df_spring['Tally'].to_numpy(), 'Spring')
+    line_plot(ax5, crime_df_summer['Day'].to_numpy(), crime_df_summer['Tally'].to_numpy(), 'Summer')
+    line_plot(ax5, crime_df_winter['Day'].to_numpy(), crime_df_winter['Tally'].to_numpy(), 'Winter')
+    ax5.set_xlabel('Day')
+    ax5.set_ylabel('Crime')
+    ax5.set_title('Crimes commmited on day of week')
+    ax5.legend(bbox_to_anchor=(1,0.5), loc='center left')
+    plt.tight_layout()
+    ax5.set_xticks(np.arange(0,6))
+    labels = ['Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat', 'Sun']
+    ax5.set_xticklabels(labels)
+    # plt.show()
 
     # kde_plot(crimes_total_offenses_day['Day'], crimes_total_offenses_day['Tally'])
     # plt.show()
+
+    crime_df_street = crime_df.groupby(['BLOCKADD']).agg({'Tally':'sum'}).reset_index()
+    crime_df_street = crime_df_street.sort_values(by=['Tally'], ascending=False)
