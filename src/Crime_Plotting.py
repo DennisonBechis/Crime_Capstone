@@ -5,7 +5,10 @@ from matplotlib import pyplot as plt
 from Plot_Functions import *
 from Folium_Graphing import *
 
+
 if __name__=="__main__":
+
+    plt.style.use('fivethirtyeight')
 
     # DF_Copies
 
@@ -25,7 +28,7 @@ if __name__=="__main__":
     total = crime_by_year['Tally'].to_numpy()
     fig1 = plt.figure(figsize=(6,6))
     ax1 = fig1.add_subplot(1,1,1)
-    bar_plot(ax1, year_labels, total, 'Year', 'Accidents', color = 'red')
+    bar_plot(ax1, year_labels, total, 'Crime_by_year', 'Year', '# Crimes', 'red', 'Crimes per Year')
 
     # Grouping by Month/Year
 
@@ -35,7 +38,7 @@ if __name__=="__main__":
     labels = ['' for x in range(0,len(year_month))]
     fig2 = plt.figure(figsize=(6,6))
     ax2 = fig2.add_subplot(1,1,1)
-    bar_plot(ax2, labels, total_month, 'Month', 'Offenses', color = 'red')
+    bar_plot(ax2, labels, total_month, 'crime_by_month_year', 'Month', 'Crimes Committed', 'red', "Crimes per Month")
 
     # Grouping by Crime_df / Month
 
@@ -48,7 +51,7 @@ if __name__=="__main__":
     ax3 = fig3.add_subplot(1,1,1)
     total_offenses_by_month = crime_by_month['Tally'].to_numpy()
     labels = crime_by_month['Month'].to_numpy()
-    bar_plot(ax3, labels, total_offenses_by_month, 'Months', 'Offenses', color = 'red')
+    bar_plot(ax3, labels, total_offenses_by_month, 'crime_by_month', 'Months', 'Crimes Committed', color = 'red')
 
     # Highest Crimes in Boulder
 
@@ -58,7 +61,7 @@ if __name__=="__main__":
     values = crimes_total_offenses['Tally'].to_numpy()
     fig4 = plt.figure(figsize=(6,6))
     ax4 = fig4.add_subplot(1,1,1)
-    horizontal_bar(ax4, labels, values, 'Occurrences', 'Offense', 'Boulder Offenses')
+    horizontal_bar(ax4, labels, values, 'Boulder_felony_offenses', 'Count', '', 'Felony Crimes')
 
     # New DF with top 6 Offenses
 
@@ -76,7 +79,7 @@ if __name__=="__main__":
         data = []
         for x in range(0, len(latitude)):
             data.append([latitude[x],longitude[x]])
-        folium_crime_heatmap(heat_map_folium, name, data)
+        # folium_crime_heatmap(heat_map_folium, name, data)
 
     # KDE plot Crime vs Month
 
@@ -103,11 +106,6 @@ if __name__=="__main__":
     line_plot(ax5, crime_df_summer['Day'].to_numpy(), crime_df_summer['Tally'].to_numpy())
     line_plot(ax5, crime_df_winter['Day'].to_numpy(), crime_df_winter['Tally'].to_numpy())
     plt.show()
-
-
-
-
-
 
     # kde_plot(crimes_total_offenses_day['Day'], crimes_total_offenses_day['Tally'])
     # plt.show()

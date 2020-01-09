@@ -5,7 +5,7 @@ from colorspacious import cspace_converter
 from collections import OrderedDict
 
 
-def bar_plot(ax, X_labels, Y_axis, x_name = False, y_name = False, color = 'blue'):
+def bar_plot(ax, X_labels, Y_axis, name= 'bar_plot', x_name = False, y_name = False, color = 'blue', title =''):
 
     X_ticks = [x for x in range(0,len(X_labels))]
     ax.bar(X_ticks, Y_axis, color= color, align= 'center')
@@ -14,9 +14,12 @@ def bar_plot(ax, X_labels, Y_axis, x_name = False, y_name = False, color = 'blue
     ax.yaxis.grid(True)
     ax.set_xlabel(x_name)
     ax.set_ylabel(y_name)
+    ax.set_title(title)
+    plt.tight_layout()
+    plt.savefig('../images/'+name+'.png')
     return ax
 
-def kde_plot(x, y, xlabel=False, ylabel=False, name = ''):
+def kde_plot(x, y, xlabel=False, ylabel=False, name = 'kde_plot'):
 
     ax = sns.set(style="ticks")
     ax = sns.jointplot(x, y, kind="kde", color='red', ylim=(-.5,12.5))
@@ -25,8 +28,8 @@ def kde_plot(x, y, xlabel=False, ylabel=False, name = ''):
     plt.savefig('../images/'+name+'.png')
     return ax
 
-def horizontal_bar(ax, labels, data, x_label = False, y_label = False, title = False):
-    plt.style.use('classic')
+def horizontal_bar(ax, labels, data, name='horizontal_bar_graph', x_label = False, y_label = False, title = False):
+
     colors = ['tab:blue','tab:orange','tab:red','tab:green','tab:purple','tab:brown',
                     'tab:pink','tab:cyan','tab:olive','tab:blue','tab:grey','tab:brown']
     length_labels = np.arange(len(labels))
@@ -37,8 +40,10 @@ def horizontal_bar(ax, labels, data, x_label = False, y_label = False, title = F
     ax.set_yticklabels(labels)
     ax.set_title(title)
     plt.tight_layout()
+    plt.savefig('../images/'+name+'.png')
     return ax
 
 def line_plot(ax, x, y):
+
     ax.plot(x,y)
     return ax
