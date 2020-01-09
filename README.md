@@ -1,6 +1,7 @@
   <h1 align="center">
 	  Boulder Police - Offenses (2008-2019)
   </h1>
+  
 ![Offenses around Boulder, CO](images/Heat_map_All.png)
 
 
