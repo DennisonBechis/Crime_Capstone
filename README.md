@@ -67,8 +67,8 @@ The latitude and longitude coordinates were very interesting pieces of informati
 Obervations:
 1. Pearl Street
 2. University Hill
-3. Heatspot at Fire Boulder Department
-4. Heatspots are very seasonal
+3. Heat spot at Fire Boulder Department
+4. Heat spots are very seasonal
 
 ![Heatmap around Boulder, CO](images/png_to_gif.gif)
 
