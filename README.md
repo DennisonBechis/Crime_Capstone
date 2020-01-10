@@ -8,10 +8,11 @@
 ## Table of Contents
 1. [Introduction](#Introduction)
 2. [Data](#data)
-3. [Boulder County Offenses](#Boulder-County-Offenses)
-4. [When Boulder Offenses occur](#when-these-offenses-occur?)
-5. [Analysis?](#Data-interpretation?)
-6. [Additional Questions?](#Additional-Questions?)
+3. [When is crime most active?](#Boulder-County-Offenses)
+4. [What types of crime occur in Boulder?](#when-these-offenses-occur?)
+5. [Where are crimes being committed?](#When)
+6. [Greatest factors in Boulder crime](#Factors)
+6. [Additional Questions](#Additional-Questions?)
 
 ## Introduction
 
