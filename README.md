@@ -8,11 +8,11 @@
 ## Table of Contents
 1. [Introduction](#Introduction)
 2. [Data](#data)
-3. [When is crime most active?](#When-is-crime-most-active?)
-4. [What types of crime occur in Boulder?](#What-types-of-crime-occur-in-Boulder?)
-5. [Where are crimes being committed?](#Where-are-crimes-being-committed?)
+3. [When is crime most active?](#When-is-crime-most-active)
+4. [What types of crime occur in Boulder?](#What-types-of-crime-occur-in-Boulder)
+5. [Where are crimes being committed?](#Where-are-crimes-being-committed)
 6. [Greatest factors in Boulder crime](#Greatest-factors-in-Boulder-crime)
-6. [Additional Questions](#Additional-Questions?)
+6. [Additional Questions](#Additional-Questions)
 
 ## Introduction
 
