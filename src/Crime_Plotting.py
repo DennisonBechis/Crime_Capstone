@@ -21,7 +21,6 @@ if __name__=="__main__":
     crime_df['Month'] = crime_df.apply(lambda x: x['REPORTDATE'][5:7], axis=1)
     crime_df['Key'] = crime_df.apply(lambda row: assign_key_values(row[6]), axis=1)
     crime_df['Tally'] = 1
-    print(crime_df)
     # Group By Year
 
     crime_by_year = crime_df.groupby(crime_df['Year']).agg({'Tally':'sum'}).reset_index()
@@ -42,7 +41,9 @@ if __name__=="__main__":
 
     fig2 = plt.figure(figsize=(8,5))
     ax2 = fig2.add_subplot(1,1,1)
-    line_plot(ax2, a, total_month, label='label')
+    bar_plot(ax2, year_month, total_month, 'Total_crimes_year', 'Months', '# Crimes', 'red', 'Crimes from 2008-2019')
+    ax2.set_xticks(np.arange(0,len(year_month)))
+    ax2.set_xticklabels(labels)
     plt.show()
 
     # Grouping by Crime_df / Month
@@ -119,3 +120,21 @@ if __name__=="__main__":
 
     crime_df_street = crime_df.groupby(['BLOCKADD']).agg({'Tally':'sum'}).reset_index()
     crime_df_street = crime_df_street.sort_values(by=['Tally'], ascending=False)
+
+    #
+
+    # map2 = Create_folium_map(crime_df, 'Y', 'X')
+    # list_of_lists = []
+    # x = '01'
+    # for x in month_list:
+    #     month_lists = []
+    #     longs = crime_df[crime_df['Month'] == x]['X'].to_numpy()
+    #     lats = crime_df[crime_df['Month'] == x]['Y'].to_numpy()
+    #     for x in range(0,len(longs)):
+    #         month_lists.append([lats[x],longs[x]])
+    #
+    #     list_of_lists.append(month_lists)
+    #
+    # hm = folium.plugins.HeatMapWithTime(list_of_lists,auto_play=True,max_opacity=0.3)
+    # hm.add_to(map2)
+    # map2.save('../images/heatmapwithtime.html')
