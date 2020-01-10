@@ -81,11 +81,12 @@ Most of my data has made it apparent that seasons may have a strong influence on
 
 ![Crimes per Season Boulder, CO](images/Season.png)
 
-Takeaways:
+Main Discoveries:
 1. Crime peaks in Summer and Fall seasons.
 2. People commit crime less during the Winter.
 3. Crime is less on Saturday and Sunday.
-4. Most criminal activity is peaks on Fridays
+4. Most criminal activity is peaks on Fridays.
+5. Top felony offenses are from vandalism and burglary.
 
 
 ## Additional Questions
