@@ -2,7 +2,8 @@
 	  Boulder Police - Felony Offenses
   </h1>
 
-By: Dennison Bechis
+Capstone 1
+By Dennison Bechis
 
 ## Table of Contents
 1. [Introduction](#Introduction)
