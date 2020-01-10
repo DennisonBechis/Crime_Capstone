@@ -43,7 +43,7 @@ Similar to the graph above, I decided to graph crimes agaisnt months. In this gr
 
 Taking this one step further, We can look at the distribution of crimes committed each month from 2008-2019. The resulting chart shows trends we saw in the two figures above.
 
-![Crimes per Month and Year Boulder, CO](images/crime_by_month_year.png)
+![Crimes per Month and Year Boulder, CO](images/Total_crimes_year.png)
 
 ## What types of crime occur in Boulder?
 
