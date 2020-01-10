@@ -1,9 +1,8 @@
   <h1 align="center">
 	  Boulder Police - Felony Offenses
   </h1>
-  
-![Offenses around Boulder, CO](images/Heat_map_All.png)
 
+By: Dennison Bechis
 
 ## Table of Contents
 1. [Introduction](#Introduction)
